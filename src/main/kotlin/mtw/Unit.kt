@@ -11,8 +11,8 @@ class Unit(
     override fun toString(): String = name.toString()
 
     companion object {
-        val predefinedUnits = listOf(
-            FactionName.ENGLAND to Unit(
+        val predefinedUnits = mapOf(
+            UnitsName.YEOMAN_ARCHERS to Unit(
                 name = UnitsName.YEOMAN_ARCHERS,
                 type = UnitsType.MISSILE_INFANTRY,
                 attack = 8,
@@ -20,7 +20,7 @@ class Unit(
                 hitPoints = 1,
                 experience = 0
             ),
-            FactionName.ENGLAND to Unit(
+            UnitsName.SHERWOOD_ARCHERS to Unit(
                 name = UnitsName.SHERWOOD_ARCHERS,
                 type = UnitsType.MISSILE_INFANTRY,
                 attack = 13,
@@ -81,7 +81,7 @@ class Unit(
 }
 
 
-enum class UnitsName(val unitsName: String) {
+enum class UnitsName (val unitsName: String) {
     YEOMAN_ARCHERS("Yeoman Archers"),
     SHERWOOD_ARCHERS("Sherwood Archers"),
     SCOTS_GUARD("Scots Guard"),
