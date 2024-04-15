@@ -1,6 +1,6 @@
 package mtw
 
-class Unit(
+class MtwUnit(
     val name: UnitsName,
     val type: UnitsType,
     val attack: Int,
@@ -12,7 +12,7 @@ class Unit(
 
     companion object {
         val predefinedUnits = mapOf(
-            UnitsName.YEOMAN_ARCHERS to Unit(
+            UnitsName.YEOMAN_ARCHERS to MtwUnit(
                 name = UnitsName.YEOMAN_ARCHERS,
                 type = UnitsType.MISSILE_INFANTRY,
                 attack = 8,
@@ -20,7 +20,7 @@ class Unit(
                 hitPoints = 1,
                 experience = 0
             ),
-            UnitsName.SHERWOOD_ARCHERS to Unit(
+            UnitsName.SHERWOOD_ARCHERS to MtwUnit(
                 name = UnitsName.SHERWOOD_ARCHERS,
                 type = UnitsType.MISSILE_INFANTRY,
                 attack = 13,
@@ -28,7 +28,7 @@ class Unit(
                 hitPoints = 2,
                 experience = 0
             ),
-            FactionName.FRANCE to Unit(
+            FactionName.FRANCE to MtwUnit(
                 name = UnitsName.SCOTS_GUARD,
                 type = UnitsType.MISSILE_INFANTRY,
                 attack = 9,
@@ -36,7 +36,7 @@ class Unit(
                 hitPoints = 1,
                 experience = 0
             ),
-            FactionName.THE_HOLY_ROMAN_EMPIRE to Unit(
+            FactionName.THE_HOLY_ROMAN_EMPIRE to MtwUnit(
                 name = UnitsName.ZWEI_HANDER,
                 type = UnitsType.HEAVY_INFANTRY,
                 attack = 14,
@@ -44,7 +44,7 @@ class Unit(
                 hitPoints = 1,
                 experience = 0
             ),
-            FactionName.MILAN to Unit(
+            FactionName.MILAN to MtwUnit(
                 name = UnitsName.GENOESE_CROSSBOW_MILITIA,
                 type = UnitsType.MISSILE_INFANTRY,
                 attack = 12,
@@ -52,7 +52,7 @@ class Unit(
                 hitPoints = 1,
                 experience = 0
             ),
-            FactionName.SICILY to Unit(
+            FactionName.SICILY to MtwUnit(
                 name = UnitsName.MUSLIM_ARCHERS,
                 type = UnitsType.MISSILE_INFANTRY,
                 attack = 11,
@@ -60,7 +60,7 @@ class Unit(
                 hitPoints = 1,
                 experience = 0
             ),
-            FactionName.EGYPT to Unit(
+            FactionName.EGYPT to MtwUnit(
                 name = UnitsName.TABARDARIYYA,
                 type = UnitsType.HEAVY_INFANTRY,
                 attack = 20,
@@ -68,7 +68,7 @@ class Unit(
                 hitPoints = 1,
                 experience = 0
             ),
-            FactionName.RUSSIA to Unit(
+            FactionName.RUSSIA to MtwUnit(
                 name = UnitsName.TSARS_GUARD,
                 type = UnitsType.HEAVY_CAVALRY,
                 attack = 14,
