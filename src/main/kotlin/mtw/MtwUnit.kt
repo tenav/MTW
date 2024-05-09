@@ -28,7 +28,7 @@ class MtwUnit(
                 hitPoints = 2,
                 experience = 0
             ),
-            FactionName.FRANCE to MtwUnit(
+            UnitsName.SCOTS_GUARD to MtwUnit(
                 name = UnitsName.SCOTS_GUARD,
                 type = UnitsType.MISSILE_INFANTRY,
                 attack = 9,
@@ -36,7 +36,7 @@ class MtwUnit(
                 hitPoints = 1,
                 experience = 0
             ),
-            FactionName.THE_HOLY_ROMAN_EMPIRE to MtwUnit(
+            UnitsName.ZWEI_HANDER to MtwUnit(
                 name = UnitsName.ZWEI_HANDER,
                 type = UnitsType.HEAVY_INFANTRY,
                 attack = 14,
@@ -44,7 +44,7 @@ class MtwUnit(
                 hitPoints = 1,
                 experience = 0
             ),
-            FactionName.MILAN to MtwUnit(
+            UnitsName.GENOESE_CROSSBOW_MILITIA to MtwUnit(
                 name = UnitsName.GENOESE_CROSSBOW_MILITIA,
                 type = UnitsType.MISSILE_INFANTRY,
                 attack = 12,
@@ -52,7 +52,7 @@ class MtwUnit(
                 hitPoints = 1,
                 experience = 0
             ),
-            FactionName.SICILY to MtwUnit(
+            UnitsName.MUSLIM_ARCHERS to MtwUnit(
                 name = UnitsName.MUSLIM_ARCHERS,
                 type = UnitsType.MISSILE_INFANTRY,
                 attack = 11,
@@ -60,7 +60,7 @@ class MtwUnit(
                 hitPoints = 1,
                 experience = 0
             ),
-            FactionName.EGYPT to MtwUnit(
+            UnitsName.TABARDARIYYA to MtwUnit(
                 name = UnitsName.TABARDARIYYA,
                 type = UnitsType.HEAVY_INFANTRY,
                 attack = 20,
@@ -68,7 +68,7 @@ class MtwUnit(
                 hitPoints = 1,
                 experience = 0
             ),
-            FactionName.RUSSIA to MtwUnit(
+            UnitsName.TSARS_GUARD to MtwUnit(
                 name = UnitsName.TSARS_GUARD,
                 type = UnitsType.HEAVY_CAVALRY,
                 attack = 14,
@@ -81,7 +81,7 @@ class MtwUnit(
 }
 
 
-enum class UnitsName (val unitsName: String) {
+enum class UnitsName(val unitsName: String) {
     YEOMAN_ARCHERS("Yeoman Archers"),
     SHERWOOD_ARCHERS("Sherwood Archers"),
     SCOTS_GUARD("Scots Guard"),

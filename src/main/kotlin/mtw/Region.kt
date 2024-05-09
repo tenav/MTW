@@ -12,7 +12,7 @@ class Region(
                 name = RegionName.London,
                 type = RegionType.LARGE_TOWN,
                 isCapital = true,
-                coordinates = Coordinates(1,1)
+                coordinates = Coordinates(9,8)
             ),
             RegionName.Caen to Region(
                 name = RegionName.Caen,
@@ -138,7 +138,13 @@ class Region(
                 name = RegionName.Novgorod,
                 type = RegionType.MINOR_CITY,
                 isCapital = true,
-                coordinates = Coordinates(22,23)
+                coordinates = Coordinates(3,14)
+            ),
+            RegionName.Moscow to Region(
+                name = RegionName.Moscow,
+                type = RegionType.TOWN,
+                isCapital = false,
+                coordinates = Coordinates(16,14)
             )
         )
     }
@@ -166,7 +172,8 @@ enum class RegionName {
     Cairo,
     Alexandria,
     Gaza,
-    Novgorod
+    Novgorod,
+    Moscow
 }
 
 enum class RegionType(val type: String) {

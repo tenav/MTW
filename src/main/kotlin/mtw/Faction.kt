@@ -26,7 +26,7 @@ class Faction(
             Purse: $purse
             Strengths: $strengths
             Weaknesses: $weaknesses
-            Units: $units
+            Units: ${units.map { it?.name?.unitsName }.joinToString(separator = ", ")}
         """.trimMargin()
         /*
         Функция find принимает лямбда-выражение в качестве аргумента. find будет возвращать первый элемент из списка
@@ -67,72 +67,72 @@ class Faction(
                 )
             ),
 
-            FactionName.FRANCE to Faction(
-                name = FactionName.FRANCE.factionName,
-                bannerColor = BannerColor.BLUE_YELLOW.bannerColor,
-                culture = Culture.NORTHERN_EUROPEAN.culture,
-                religion = Religion.Catholic.toString(),
-                regions = listOf(
-                    Region.predefinedRegions[RegionName.Paris]!!,
-                    Region.predefinedRegions[RegionName.Angers]!!,
-                    Region.predefinedRegions[RegionName.Marseille]!!,
-                    Region.predefinedRegions[RegionName.Rheims]!!,
-                    Region.predefinedRegions[RegionName.Toulouse]!!
-                ),
-                purse = 8000,
-                strengths = "Fields the best heavy cavalry in the west, and good infantry in the late period",
-                weaknesses = "Relatively weak infantry in early period",
-                units = listOf()
-            ),
-
-            FactionName.THE_HOLY_ROMAN_EMPIRE to Faction(
-                name = FactionName.THE_HOLY_ROMAN_EMPIRE.factionName,
-                bannerColor = BannerColor.BLACK_YELLOW.bannerColor,
-                culture = Culture.NORTHERN_EUROPEAN.culture,
-                religion = Religion.Catholic.toString(),
-                regions = listOf(
-                    Region.predefinedRegions[RegionName.Frankfurt]!!,
-                    Region.predefinedRegions[RegionName.Bologna]!!,
-                    Region.predefinedRegions[RegionName.Innsbruck]!!,
-                    Region.predefinedRegions[RegionName.Nuremburg]!!,
-                    Region.predefinedRegions[RegionName.Staufen]!!,
-                    Region.predefinedRegions[RegionName.Vienna]!!
-                ),
-                purse = 6000,
-                strengths = "Strong all-round",
-                weaknesses = "Lacks the later period professional armies of England and France",
-                units = listOf()
-            ),
-
-            FactionName.MILAN to Faction(
-                name = FactionName.MILAN.factionName,
-                bannerColor = BannerColor.GREEN_YELLOW.bannerColor,
-                culture = Culture.SOUTHERN_EUROPEAN.culture,
-                religion = Religion.Catholic.toString(),
-                regions = listOf(
-                    Region.predefinedRegions[RegionName.Milan]!!,
-                    Region.predefinedRegions[RegionName.Genoa]!!
-                ),
-                purse = 6000,
-                strengths = "Boasts strong militia infantry, crossbowmen and late technology",
-                weaknesses = "Poor offensive cavalry",
-                units = listOf()
-            ),
-
-            FactionName.SICILY to Faction(
-                name = FactionName.SICILY.factionName,
-                bannerColor = BannerColor.GREY_YELLOW.bannerColor,
-                culture = Culture.SOUTHERN_EUROPEAN.culture,
-                religion = Religion.Catholic.toString(),
-                regions = listOf(
-                    Region.predefinedRegions[RegionName.Palermo]!!,
-                    Region.predefinedRegions[RegionName.Naples]!!
-                ),
-                purse = 9000,
-                strengths = "Can field strong militia, Norman knights and Muslim archers",
-                weaknesses = "Lacks good late period cavalry",
-                units = listOf()
-            ),
+//            FactionName.FRANCE to Faction(
+//                name = FactionName.FRANCE.factionName,
+//                bannerColor = BannerColor.BLUE_YELLOW.bannerColor,
+//                culture = Culture.NORTHERN_EUROPEAN.culture,
+//                religion = Religion.Catholic.toString(),
+//                regions = listOf(
+//                    Region.predefinedRegions[RegionName.Paris]!!,
+//                    Region.predefinedRegions[RegionName.Angers]!!,
+//                    Region.predefinedRegions[RegionName.Marseille]!!,
+//                    Region.predefinedRegions[RegionName.Rheims]!!,
+//                    Region.predefinedRegions[RegionName.Toulouse]!!
+//                ),
+//                purse = 8000,
+//                strengths = "Fields the best heavy cavalry in the west, and good infantry in the late period",
+//                weaknesses = "Relatively weak infantry in early period",
+//                units = listOf()
+//            ),
+//
+//            FactionName.THE_HOLY_ROMAN_EMPIRE to Faction(
+//                name = FactionName.THE_HOLY_ROMAN_EMPIRE.factionName,
+//                bannerColor = BannerColor.BLACK_YELLOW.bannerColor,
+//                culture = Culture.NORTHERN_EUROPEAN.culture,
+//                religion = Religion.Catholic.toString(),
+//                regions = listOf(
+//                    Region.predefinedRegions[RegionName.Frankfurt]!!,
+//                    Region.predefinedRegions[RegionName.Bologna]!!,
+//                    Region.predefinedRegions[RegionName.Innsbruck]!!,
+//                    Region.predefinedRegions[RegionName.Nuremburg]!!,
+//                    Region.predefinedRegions[RegionName.Staufen]!!,
+//                    Region.predefinedRegions[RegionName.Vienna]!!
+//                ),
+//                purse = 6000,
+//                strengths = "Strong all-round",
+//                weaknesses = "Lacks the later period professional armies of England and France",
+//                units = listOf()
+//            ),
+//
+//            FactionName.MILAN to Faction(
+//                name = FactionName.MILAN.factionName,
+//                bannerColor = BannerColor.GREEN_YELLOW.bannerColor,
+//                culture = Culture.SOUTHERN_EUROPEAN.culture,
+//                religion = Religion.Catholic.toString(),
+//                regions = listOf(
+//                    Region.predefinedRegions[RegionName.Milan]!!,
+//                    Region.predefinedRegions[RegionName.Genoa]!!
+//                ),
+//                purse = 6000,
+//                strengths = "Boasts strong militia infantry, crossbowmen and late technology",
+//                weaknesses = "Poor offensive cavalry",
+//                units = listOf()
+//            ),
+//
+//            FactionName.SICILY to Faction(
+//                name = FactionName.SICILY.factionName,
+//                bannerColor = BannerColor.GREY_YELLOW.bannerColor,
+//                culture = Culture.SOUTHERN_EUROPEAN.culture,
+//                religion = Religion.Catholic.toString(),
+//                regions = listOf(
+//                    Region.predefinedRegions[RegionName.Palermo]!!,
+//                    Region.predefinedRegions[RegionName.Naples]!!
+//                ),
+//                purse = 9000,
+//                strengths = "Can field strong militia, Norman knights and Muslim archers",
+//                weaknesses = "Lacks good late period cavalry",
+//                units = listOf()
+//            ),
             FactionName.EGYPT to Faction(
                 name = FactionName.EGYPT.factionName,
                 bannerColor = BannerColor.LIGHT_BROWN.bannerColor,
@@ -146,7 +146,9 @@ class Faction(
                 purse = 8000,
                 strengths = "Relies on powerful cavalry, particularly the Mamluks",
                 weaknesses = "Lacks heavy infantry, particularly in the late period",
-                units = listOf()
+                units = listOf(
+                    MtwUnit.predefinedUnits[UnitsName.TABARDARIYYA]!!
+                )
             ),
             FactionName.RUSSIA to Faction(
                 name = FactionName.RUSSIA.factionName,
@@ -159,7 +161,9 @@ class Faction(
                 purse = 11000,
                 strengths = "Has a great mix of missile and melee cavalry",
                 weaknesses = "Poor early infantry and missile units",
-                units = listOf()
+                units = listOf(
+                    MtwUnit.predefinedUnits[UnitsName.TSARS_GUARD]!!
+                )
             )
         )
     }
@@ -175,6 +179,6 @@ enum class FactionName(val factionName: String) {
     RUSSIA("Russia")
 }
 
-val factions = FactionName.values().toList()
-var userChoices: FactionName? = null
+val factions = Faction.predefinedFactions.keys
+var userChoice: FactionName? = null
 var computerChoices: List<FactionName> = listOf()

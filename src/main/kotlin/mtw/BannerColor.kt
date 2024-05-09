@@ -7,5 +7,5 @@ enum class BannerColor(val bannerColor: String) {
     GREEN_YELLOW("Green Yellow"),
     GREY_YELLOW("Grey Yellow"),
     LIGHT_BROWN("Light Brown"),
-    DARK_BLUE ("Dark Blue")
+    DARK_BLUE("Dark Blue")
 }
